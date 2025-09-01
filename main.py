@@ -34,7 +34,19 @@ def create_pytrends():
 
 def get_trending_gacha_game():
   print("[LOG] Starting to fetch Google Trends data for gacha games...")
-  chunks = [GACHA_KEYWORDS[i:i+5] for i in range(0, len(GACHA_KEYWORDS), 5)]
+
+  # Shuffle & randomize keywords
+  keywords = GACHA_KEYWORDS[:]
+  random.shuffle(keywords)
+  chunks = []
+
+  i = 0
+  while i < len(keywords):
+    chunk_size = random.randint(2, 4)
+    chunk = keywords[i:i+chunk_size]
+    chunks.append(chunk)
+    i += chunk_size
+
   combined_data = {}
 
   for chunk in chunks:
