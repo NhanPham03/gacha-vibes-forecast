@@ -1,11 +1,8 @@
 # gacha-vibes-forecast
 
-![Python version](https://img.shields.io/badge/Python-3.12.4-green)
-![LLM version](https://img.shields.io/badge/Gemini-Flash_2.5-green)
-
-## License
-
-- **Code**: Licensed under the [MIT License](./LICENSE)
+[![Python version](https://img.shields.io/badge/Python-3.12.4-green)](https://www.python.org/downloads/release/python-3124/)
+[![LLM version](https://img.shields.io/badge/Gemini-2.5_Flash-green)](https://deepmind.google/models/gemini/flash/)
+[![License](https://img.shields.io/badge/License-MIT-blue)](./LICENSE)
 
 ## Project Structure
 
@@ -35,12 +32,12 @@ Copy from `.env.example` and fill in the values:
 | Variable              | Description                                |
 | :-------------------- | :----------------------------------------- |
 | `DISCORD_WEBHOOK_URL` | Required to send messages to Discord       |
-| `GOOGLE_API_KEY`      | Use Gemini Flash 2.5 to generate forecasts |
+| `GOOGLE_API_KEY`      | Use Gemini 2.5 Flash to generate forecasts |
 
 ## Commands
 
-**MAKE SURE YOU'RE USING PROXIES, VPNS**
-**REPEATED RUNS ON THE SAME IP WILL GET YOUR IP FLAGGED BY GOOGLE**
+**MAKE SURE YOU'RE USING PROXIES, VPNS.**  
+**REPEATED RUNS ON THE SAME IP WILL GET YOUR IP FLAGGED BY GOOGLE.**
 
 All commands are run from the root of the project, from a terminal:
 
