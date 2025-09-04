@@ -11,11 +11,14 @@ Inside of this Python project, you'll see the following folders and files:
 ```text
 /
 ├── .github/worksflows/
-│   └── forecast.yaml             # GitHub Actions workflow (Runs weekly)
+│   └── forecast.yaml             # GitHub Actions workflow (Runs weekly, Thursday at 0:00 UTC)
 │
 ├── browsers.py                   # User Agents browser config
 ├── keywords.py                   # Google Trends keywords
-├── responses.py                  # Google Gemini API (Flash 2.5) prompts
+│
+├── discord_utils.py              # Discord webhook functions
+├── gemini_utils.py               # Google Gemini API (Flash 2.5) prompts
+├── steam_utils.py                # Steam News API functions
 │
 ├── main.py                       # Main script
 │
