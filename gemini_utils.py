@@ -2,7 +2,7 @@ import os
 import google.generativeai as genai
 
 # FORECAST
-def generate_forecast(trend_data):
+def generate_forecast(trend_data, context):
   trend_lines = "\n".join([f"- {game}: {score}" for game, score in trend_data])
   prompt = f"""Here are last week's Google Trends scores for popular gacha games:
 
@@ -31,10 +31,10 @@ Gache Vibes Forecast: [Overall vibes]
 - Use bullet points, emojis, jokes, and character.
 - Avoid too much brainrot terms, and spoilers.
 - Add details where necessary (e.g. specific banners, characters, content).
-- Group games with scores <= 10 together for 1 section.
 
 ! YOU MUST AVOID (DON'Ts):
 - Don't keep the square brackets ("[]") in the layout, they are used to indicate a section.
+- Don't hallucinate or suggest anything that is not in the trend data or context.
 - If trend data is missing or unavailable, do NOT generate a sample forecast. Just respond with an appropriate error or explanation.
 - Don't label the sections (e.g. Outro: Bla bla bla.).
 """
